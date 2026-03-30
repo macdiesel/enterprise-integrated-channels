@@ -1,5 +1,4 @@
 # Core requirements for using this application
--c constraints.txt
 
 Django>=4.2             # Web application framework
 
@@ -26,4 +25,5 @@ edx-tincan-py35
 # Normally we don't pin anything here, but this flexible constraint helps ensure the version of
 # enterprise-integrated-channels deployed has actually been tested with this major version of
 # snowflake-connector-python.
-snowflake-connector-python>=4.0.0,<5.0.0  # Snowflake database connector for learning time queries
+# Allow 3.18+ for compatibility with downstream edx-enterprise constraints.
+snowflake-connector-python>=3.18.0,<5.0.0  # Snowflake database connector for learning time queries
